@@ -11,7 +11,6 @@ class Start:
             bd = self.mysql.connect(
                 host="localhost",
                 user="root",
-                passwd="admin",
                 db="industry"
             )
             return bd
