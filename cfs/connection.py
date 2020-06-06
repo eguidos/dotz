@@ -12,7 +12,7 @@ class Start:
                 host="localhost",
                 user="root",
                 passwd="admin",
-                db="industry"
+                db="mysql"
             )
             return bd
         except ConnectionError:
