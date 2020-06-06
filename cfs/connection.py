@@ -16,7 +16,7 @@ class Start:
             )
             return bd
         except ConnectionError:
-            print(f'Um erro foi encontrado ao acessar o banco {self.database}')
+            print(f'Um erro foi encontrado ao acessar o banco {self.mysql}')
         finally:
             print(f'Conexão realizada com sucesso')
 
