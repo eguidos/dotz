@@ -30,6 +30,8 @@ class Billing:
 
         except pd.errors.ParserError:
             utils.data_error()
+        finally:
+            utils.data_values('bill', self._bill)
 
 
 

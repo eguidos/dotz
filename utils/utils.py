@@ -17,7 +17,7 @@ def get_path(path):
 
 
 def data_values(tbname, df):
-    log.logging.info(f"Dados a serem inseridos na tabela {tbname} \n \t {df}")
+    log.logging.warning(f"Dados a serem inseridos na tabela {tbname} \n \t {df}")
 
 def data_error():
     log.logging.warning(f"O arquivo necessário não foi encontrado")
