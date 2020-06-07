@@ -31,8 +31,7 @@ class Components:
             utils.data_error()
         except FileNotFoundError as file:
             utils.not_exists(file)
-        finally:
-            utils.data_values('components', self.components)
+
 
 
 
