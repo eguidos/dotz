@@ -38,14 +38,13 @@ class Pricing:
             df["annual_cost"] = df["cost"] * df["amount_to_buy"]
 
             df = df.groupby(['tube_assembly_id']).apply(self.set_cost_by_assembly)
-
+            utils.data_values('Price', df)
             return df
 
         except pd.errors.ParserError:
             utils.data_error()
         except FileNotFoundError as file:
             utils.not_exists(file)
-        finally:
-            utils.data_values('price', self._bill)
+
 
 
