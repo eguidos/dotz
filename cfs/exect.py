@@ -23,6 +23,7 @@ def run_components(data):
 
 class Execution:
     try:
+        log.logging.info("Criando Componentes necessários")
 
         def __init__(self):
             self.cursor = conf.db.cursor()
@@ -56,3 +57,5 @@ class Execution:
 
     except ConnectionError:
         log.logging.error("Não realizar a conexão ")
+    finally:
+        log.logging.error("Ingestões efetuadas.")

@@ -13,19 +13,12 @@ comp = utils.get_path('./comp_boss.csv')
 def main():
 
     commands = Execution()
-
-    log.logging.info("Configuarando componentes")
     commands.create_db()
     commands.set_db()
-
-    log.logging.info(f'Criando as tabelas Bill, Price e Components')
     commands.create_table()
-
-    log.logging.info("Processo de ingestão iniciado")
     commands.insert_data_bill(bill)
     commands.insert_data_price(price)
     commands.insert_data_components(comp)
-
 
     return True
 

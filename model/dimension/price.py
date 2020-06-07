@@ -39,8 +39,6 @@ class Pricing:
 
             df = df.groupby(['tube_assembly_id']).apply(self.set_cost_by_assembly)
 
-            utils.data_values('price', df)
-
             return df
 
         except pd.errors.ParserError:

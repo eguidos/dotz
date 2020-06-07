@@ -24,7 +24,6 @@ class Components:
             df['shoulder_diameter'] = df['shoulder_diameter'].astype(float)
             df['weight'] = df['weight'].astype(float)
 
-            utils.data_values('COMPONENTS', df)
             return df
 
         except pd.errors.ParserError:
