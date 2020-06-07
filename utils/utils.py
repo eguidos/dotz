@@ -1,4 +1,5 @@
 import os
+from utils import log
 
 
 def create_db():
@@ -12,4 +13,15 @@ def set_db():
 
 
 def get_path(path):
-    return os.path.abspath(f'../dotz/data/{path}')
+    return os.path.abspath(f'../data/{path}')
+
+
+def data_values(tbname, df):
+    log.logging.info(f"Dados a serem inseridos na tabela {tbname} \n \t {df}")
+
+def data_error():
+    log.logging.warning(f"O arquivo necessário não foi encontrado")
+
+def not_exists(file):
+    log.logging.error(f"O arquivo necessário não foi encontrado")
+

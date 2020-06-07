@@ -1,4 +1,5 @@
 import pandas as pd
+from utils import utils
 
 
 def transform_str_columns(df: pd.DataFrame, upper: bool = True, fillna_value: str = "N/A"):
@@ -27,14 +28,22 @@ class Pricing:
         return group
 
     def run(self):
-        df = pd.read_csv(self._bill, index_col=False)
-        df = transform_str_columns(df, upper=True, fillna_value="N/A")
-        df = df.replace(r'[^0-9]', '', regex=True)
+        try:
+            df = pd.read_csv(self._bill, index_col=False)
+            df = transform_str_columns(df, upper=True, fillna_value="N/A")
+            df = df.replace(r'[^0-9]', '', regex=True)
 
-        df = df[df["annual_usage"] != 0]
-        df["amount_to_buy"] = df[["annual_usage", "min_order_quantity"]].max(axis=1)
-        df["annual_cost"] = df["cost"] * df["amount_to_buy"]
+            df = df[df["annual_usage"] != 0]
+            df["amount_to_buy"] = df[["annual_usage", "min_order_quantity"]].max(axis=1)
+            df["annual_cost"] = df["cost"] * df["amount_to_buy"]
 
-        df = df.groupby(['tube_assembly_id']).apply(self.set_cost_by_assembly)
-        return df
+            df = df.groupby(['tube_assembly_id']).apply(self.set_cost_by_assembly)
 
+            utils.data_values('price', df)
+
+            return df
+
+        except pd.errors.ParserError:
+            utils.data_error()
+        except FileNotFoundError as file:
+            utils.not_exists(file)
