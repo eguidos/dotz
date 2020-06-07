@@ -1,9 +1,9 @@
 from cfs.exect import Execution
 from utils import utils
 
-bill = utils.get_path('/bill_of_materials.csv')
-price = utils.get_path('/price_quote.csv')
-comp = utils.get_path('/comp_boss.csv')
+bill = utils.get_path('./bill_of_materials.csv')
+price = utils.get_path('./price_quote.csv')
+comp = utils.get_path('./comp_boss.csv')
 
 """
     A classe em questão performa o ETL de acordo com as regras de negócio.

@@ -29,7 +29,12 @@ class Execution:
             self.cursor = conf.db.cursor()
             self.engine = create_engine('mysql://root:admin@localhost/industry')
 
+        log.logging.info(f'Criando as tabelas Bill, Price e Components')
+
         def create_db(self):
+            self.cursor.execute(utils.create_db())
+
+        def set_db(self):
             self.cursor.execute(utils.set_db())
 
         def create_table(self):
@@ -40,9 +45,13 @@ class Execution:
             except ConnectionError:
                 log.logging.info('Não foi possível criar as tabelas.')
 
+        log.logging.info("Processo de ingestão iniciado")
+
         def insert_data_bill(self, data):
             bill = run_bill(data)
             bill.to_sql('bill', con=self.engine, if_exists='replace', index=False)
+
+            log.logging.info("Dados inseridos com sucesso na tabela BILL")
 
         def insert_data_price(self, data):
             price = run_price(data)
@@ -52,5 +61,5 @@ class Execution:
             components = run_components(data)
             components.to_sql('components', con=self.engine, if_exists='replace', index=False)
 
-    except FileNotFoundError:
-        log.logging.error(f"Os aquivos necessário para a execução do pipeline não foram encontrados")
+    except ConnectionError:
+        log.logging.error("Não realizar a conexão ")

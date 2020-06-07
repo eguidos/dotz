@@ -13,7 +13,7 @@ def set_db():
 
 
 def get_path(path):
-    return os.path.abspath(f'../data/{path}')
+    return os.path.abspath(f'../dotz/data/{path}')
 
 
 def data_values(tbname, df):

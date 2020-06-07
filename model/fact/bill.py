@@ -30,8 +30,7 @@ class Billing:
 
         except pd.errors.ParserError:
             utils.data_error()
-        except FileNotFoundError as file:
-            utils.not_exists(file)
+
 
 
 
