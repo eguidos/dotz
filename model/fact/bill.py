@@ -24,14 +24,12 @@ class Billing:
             df['tube_assembly_id'] = df['tube_assembly_id'].replace(r'[^0-9]', '', regex=True)
             df['component_id'] = df['component_id'].replace(r'[^0-9]', '', regex=True)
 
-            utils.data_values('bill', df)
-
+            utils.data_values('Price', df)
             return df
 
         except pd.errors.ParserError:
             utils.data_error()
-        finally:
-            utils.data_values('bill', self._bill)
+
 
 
 
