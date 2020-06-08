@@ -19,7 +19,7 @@ Como destacado anteriormente, o case foi solucionado como base a tecnologia **Pa
 
 * Proposta de modelo relacional
 
-O modelo relacional foi implementado sob o banco relacional MySql 5.7 conforme o
+O modelo relacional foi implementado sob o banco relacional MySql 5.7 conforme o diagrama abaixo:
 
 ![MER](model/mer.jpeg?raw=true "Title") 
 
