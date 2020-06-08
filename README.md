@@ -1,6 +1,7 @@
 # Ingestão de dados 
 
 ## Table of contents
+
 1. Resumo
 2. Solução
     - Proposta modelo relacional - MER
@@ -17,6 +18,8 @@ de ingestão será diponibilizado no diretório base do projeto.
 Como destacado anteriormente, o case foi solucionado como base a tecnologia **Pandas**.
 
 * Proposta de modelo relacional
+
+O modelo relacional foi implementado sob o banco relacional MySql 5.7 conforme o
 
 ![MER](model/mer.jpeg?raw=true "Title") 
 
@@ -42,10 +45,10 @@ Este componente tem como principal responsabilidade padronizar por meio de uma i
 #### Commom
 Este componente tem como principal responsabilidade manter pequenos trechos de códigos que são comumnente utilizados pelas stack's de regra de negócio
 
-####Model
+#### Model
 Este componente tem como principal responsabilidade manter um dicionário de dados para cada tabela final gerada na stack das regras de negócio.
 
-####Business
+#### Business
 Este componente tem como principal responsabilidade implementar as regras de negócio.
 
 
@@ -91,7 +94,6 @@ O Putty é um software de código livre, que tem como objetivo simular um termin
 
 11. Repita os pasos 3 e 4 descritos na execução em sistemas `Linux/Ubuntu`
 
-####Resultados
+#### Resultados
     
-O relatório contendo as execuções, e os dados consumidos serão inseridos após a finalização do processo de etl no diretório `/data`
-   
+O relatório contendo as execuções serão apresentados dada a execução do arquivo `run.sh`
