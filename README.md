@@ -72,7 +72,7 @@ Este componente tem como principal responsabilidade implementar as regras de neg
 - Windows via Putty:
 
 O Putty é um software de código livre, que tem como objetivo simular um terminal SSH para o Windows. Através deve é possível manter conexões SSH, Telnet e até tuneis.
-1. Abra o PuTTY. Caso não tenha, realize o download acessando o site [Putty.org](htts://putty.org)
+1. Abra o PuTTY. Caso não tenha, realize o download acessando o site [Putty](htts://putty.org)
 
 2. À esquerda, na configuração, em Connection->SSH->Auth temos o campo “Private key file for authentication”. Clique em Browse e carregue o arquivo com sua chave privada:
 
