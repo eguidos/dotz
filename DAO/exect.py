@@ -1,8 +1,8 @@
-from cfs import conf, tables
+from DAO import conf, tables
 from model.fact.bill import Billing
 from model.dimension.price import Pricing
 from model.dimension.components import Components
-from utils import log, utils
+from commom import log, utils
 from sqlalchemy import create_engine
 
 
@@ -58,4 +58,4 @@ class Execution:
     except ConnectionError:
         log.logging.error("Não realizar a conexão ")
     finally:
-        log.logging.error("Ingestões efetuadas.")
+        log.logging.log("Arquivos carregados, preparando inserções.")

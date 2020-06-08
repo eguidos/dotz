@@ -1,6 +1,6 @@
-from cfs.exect import Execution
-from utils import utils
-from utils import log
+from DAO.exect import Execution
+from commom import utils
+from commom import log
 bill = utils.get_path('./bill_of_materials.csv')
 price = utils.get_path('./price_quote.csv')
 comp = utils.get_path('./comp_boss.csv')

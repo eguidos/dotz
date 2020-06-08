@@ -1,5 +1,5 @@
 import pandas as pd
-from utils import utils
+from commom import utils
 
 
 class Billing:
@@ -24,7 +24,7 @@ class Billing:
             df['tube_assembly_id'] = df['tube_assembly_id'].replace(r'[^0-9]', '', regex=True)
             df['component_id'] = df['component_id'].replace(r'[^0-9]', '', regex=True)
 
-            utils.data_values('Price', df)
+            utils.data_values('Bill', df)
             return df
 
         except pd.errors.ParserError:
