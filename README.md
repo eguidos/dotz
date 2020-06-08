@@ -23,7 +23,7 @@ O modelo relacional foi implementado sob o banco relacional MySql 5.7 conforme o
 
 ![MER](model/mer.jpeg?raw=true "Title") 
 
-Logicamente, o modelo foi segmentado em três principais components para a xtração de Entidade e Relacionamento.
+Logicamente, o modelo foi segmentado em dois principais components para a extração do modelo conceitual de dados.
 
 1. Tabelas Dimensionais:
     - Price
@@ -33,7 +33,7 @@ Logicamente, o modelo foi segmentado em três principais components para a xtra�
 3. [Mysql](https://www.mysql.com/) 
 4. [Pandas](https://pandas.pydata.org/)
 
-### Normalização de dados utilizando Python
+### Normalização de dados utilizando Python / Pandas
 
 ![DATA](normalization.jpeg?raw=true)
 
@@ -62,7 +62,7 @@ Este componente tem como principal responsabilidade implementar as regras de neg
     `cp key/keys.pub /home/{seu_uruario}/.ssh`
     - Solicite a inicialização da instância no Google Coud ao [OWNER](https://github.com/eguidos) do projeto.
 
-2. Conecte ao servidor via `ssh peanut@{ip_fornecido}
+2. Conecte ao servidor via `ssh peanut@{ip_fornecido}`
 
 3. Acesse o diretório /dotz contido na WorkMachine:
     `cd dotz/`
