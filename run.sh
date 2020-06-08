@@ -3,6 +3,7 @@
 WORKDIR="/home/peanut/dotz"
 
 echo "Perfomando operações necessárias "
+pip install -r requirements.txt
 
 sudo /etc/init.d/mysql start
 
@@ -15,7 +16,7 @@ fi
 
 export PYTHONPATH=:${PYTHONPATH}:${pwd}
 
-pip install -r requirements.txt
+
 
 python3 $WORKDIR/business/main.py
 
