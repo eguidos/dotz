@@ -97,3 +97,15 @@ O Putty é um software de código livre, que tem como objetivo simular um termin
 #### Resultados
     
 O relatório contendo as execuções serão apresentados dada a execução do arquivo `run.sh`
+Os dados gerados após a execução do processo serão armazenados nas tabelas Bill, Price e Components.
+
+Para vizualizar os dados inseridos siga os passos abaixo:
+
+- Digite `mysql -u root -p` em seguida `admin` para password;
+
+- Digite os comamndos:
+    `use industry;`
+    `select * from bill;`
+    `select * from components;`
+    `select * from components;`
+  
