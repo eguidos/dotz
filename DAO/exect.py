@@ -23,7 +23,7 @@ def run_components(data):
 
 class Execution:
     try:
-        log.logging.info("Criando Componentes necessários")
+        log.logging.warning("Criando Componentes necessários")
 
         def __init__(self):
             self.cursor = conf.db.cursor()
@@ -41,7 +41,7 @@ class Execution:
                 self.cursor.execute(tables.create_components())
                 self.cursor.execute(tables.create_bill())
             except ConnectionError:
-                log.logging.info('Não foi possível criar as tabelas.')
+                log.logging.warning('Não foi possível criar as tabelas.')
 
         def insert_data_bill(self, data):
             bill = run_bill(data)
@@ -58,4 +58,4 @@ class Execution:
     except ConnectionError:
         log.logging.error("Não realizar a conexão ")
     finally:
-        log.logging.log("Arquivos carregados, preparando inserções.")
+        log.logging.warning("Arquivos carregados, preparando inserções.")
