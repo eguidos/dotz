@@ -19,5 +19,10 @@ pip install -r requirements.txt
 
 python3 $WORKDIR/business/main.py
 
-echo ""
+if [ $? -eq 0 ]; then
+    echo "Data Pipline concluido"
+else
+    echo "Houveram erros durante a execução do Pipline"
+    exit
+fi
 
