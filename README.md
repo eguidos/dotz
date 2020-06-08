@@ -104,8 +104,12 @@ Para vizualizar os dados inseridos siga os passos abaixo:
 - Digite `mysql -u root -p` em seguida `admin` para password;
 
 - Digite os comamndos:
-    `use industry;`
+
+    `use industry;` 
+    
     `select * from bill;`
+    
     `select * from components;`
+    
     `select * from components;`
-  
+
