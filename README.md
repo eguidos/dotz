@@ -66,7 +66,7 @@ Este componente tem como principal responsabilidade implementar as regras de neg
 
 3. Acesse o diretório /dotz contido na WorkMachine:
     `cd dotz/`
-4. Execute o arquivo `run.sh` para instalação das dependências necessárias para execução do pipeline de ingestão.
+4. Execute o arquivo `run.sh` para instalação das dependências necessárias e a execução do pipeline de ingestão.
     `./run.sh`
     
 - Windows via Putty:
