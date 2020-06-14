@@ -1,12 +1,11 @@
 # Ingestão de dados 
 
 ## Table of contents
-
-## 1. Resumo
-## 2. Solução
+1. Resumo
+2. Solução
     - Proposta modelo relacional - MER
     - Nomalização dos dados utilizando Python Pandas
-## 3. Resultados
+3. Resultados
 
 * Resumo
 
