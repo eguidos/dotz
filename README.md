@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-1. Resumo
+# 1. Resumo
 2. Solução
     - Proposta modelo relacional - MER
     - Nomalização dos dados utilizando Python Pandas
